@@ -100,5 +100,5 @@ document.querySelectorAll('.timeline-item').forEach(item => {
 
 // Resume download/open function
 function downloadResume() {
-    window.open('assets/Balyamin - CV.pdf', '_blank');
+    window.open('assets/Resume.pdf', '_blank');
 }
