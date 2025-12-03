@@ -102,3 +102,31 @@ document.querySelectorAll('.timeline-item').forEach(item => {
 function downloadResume() {
     window.open('assets/Resume.pdf', '_blank');
 }
+// Hamburger Menu Toggle Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.querySelector('body');
+
+    // Function to close the menu
+    function closeMenu() {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        body.classList.remove('nav-open');
+    }
+
+    // Toggle logic for the hamburger icon
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open');
+        body.classList.toggle('nav-open'); // To prevent scrolling behind the menu
+    });
+
+    // Close menu when a link is clicked (for smooth scrolling)
+    navLinks.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when the CV/Resume button is clicked
+    navLinks.querySelector('.resume-btn').addEventListener('click', closeMenu);
+});
