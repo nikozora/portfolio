@@ -100,7 +100,7 @@ document.querySelectorAll('.timeline-item').forEach(item => {
 
 // Resume download/open function
 function downloadResume() {
-    window.open('assets/Resume.pdf', '_blank');
+    window.open('assets/webdev_nads_cv.pdf', '_blank');
 }
 // Hamburger Menu Toggle Logic
 document.addEventListener('DOMContentLoaded', () => {
